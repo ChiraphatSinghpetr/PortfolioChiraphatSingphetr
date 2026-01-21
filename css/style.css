@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+/* เมนู */
+.navbar {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+}
+
+.navbar nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    background: linear-gradient(135deg, #ff9f43, #feca57);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* เนื้อหา */
+.content {
+    padding: 30px;
+}
+
+/* Grid ผลงาน */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
