@@ -1,83 +1,124 @@
-body {
+/* รีเซ็ต */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    scroll-behavior: smooth; /* เลื่อนลื่น */
 }
-
-/* เมนู */
+body{
+    margin-top: 0px;
+}
+/* Navbar */
 .navbar {
     background: #2c3e50;
     color: white;
-    padding: 15px;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
 }
 
-.navbar nav a {
+.navbar a {
     color: white;
-    margin-right: 15px;
+    margin-left: 15px;
     text-decoration: none;
 }
 
 /* Hero */
 .hero {
-    height: 80vh;
-    background: linear-gradient(135deg, #ff9f43, #feca57);
-    display: flex;
+    background: linear-gradient(#f89c3c, #ffc766);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: center;
+    height: 50px;
+    padding: 0px;
+    margin-top: 0px;
+    
+}
+
+.hero-text {
     color: white;
+    padding-left: 80px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.hero-text span {
+    color: #222;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #1e7f43;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* รูปคน */
+.hero-image img {
+    width: 500px;
+    margin-top: 0;
+}
+
+/* Section */
+.section {
+    padding: 80px;
     text-align: center;
 }
 
-/* เนื้อหา */
-.content {
-    padding: 30px;
+.section h2 {
+    margin-bottom: 20px;
 }
 
-/* Grid ผลงาน */
-.grid {
+.gray {
+    background: #f4f4f4;
+}
+.hello{
+    font-size: 20px;
+}
+.IM{
+    font-size: 500=px;
+}
+.Web{
+    font-size: 20px;
+}
+/* ===== Portfolio ===== */
+.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 30px;
+    grid-template-columns: 1fr 1fr; /* ซ้าย-ขวา */
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.card {
+.portfolio-item {
     background: white;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
-@media (max-width: 480px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+.portfolio-item h3 {
+    margin: 15px 0 5px;
 }
-.hero-text {
-    color: #fff;
 
-    /* ขยับข้อความไปทางขวา */
-    padding-left: 80px;
-}
-.hero-image {
-    width: 300px;
-    height: 300px;
-    background: #fff;
-    border-radius: 50%;
-    margin: auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #999;
-
-    /* ขยับรูปขึ้น */
-    margin-top: -40px;
+.portfolio-item p {
+    font-size: 14px;
+    color: #555;
 }
