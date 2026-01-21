@@ -1,109 +1,249 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <!-- กำหนดชุดอักขระเป็น UTF-8 เพื่อรองรับภาษาไทย -->
     <meta charset="UTF-8">
-    <title>Student Portfolio</title>
+
+    <!-- ชื่อเว็บไซต์ที่แสดงบนแท็บเบราว์เซอร์ -->
+    <title>PortfolioChiraphat</title>
+    <link rel="icon" type="image/png" href="image/LOGO/T.avif">
+
+    <!-- เชื่อมไฟล์ CSS สำหรับตกแต่งเว็บไซต์ -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ===== Navbar ===== -->
+
+<!-- Navbar : เมนูนำทาง -->
+
 <header class="navbar">
+    
+    <!-- ชื่อเว็บไซต์ -->
     <h2>My Portfolio</h2>
+
+    <!-- เมนูสำหรับเลื่อนไปยังแต่ละ section -->
     <nav>
         <a href="#home">หน้าแรก</a>
-        <a href="#about">เกี่ยวกับเรา</a>
+        <a href="#about">เกี่ยวกับฉัน</a>
         <a href="#skills">ทักษะ</a>
-        <a href="#education">การศึกษา</a>
+        <a href="#Education">การศึกษา</a>
         <a href="#experience">ประสบการณ์</a>
         <a href="#projects">ผลงาน</a>
     </nav>
 </header>
 
-<!-- ===== Home ===== -->
+
+<!-- Home : หน้าแรก -->
+
 <section id="home" class="hero">
+
+    <!-- ข้อความแนะนำตัว -->
     <div class="hero-text">
-        <p class="hello">HI, MY NAME IS</p>
-        <h1 class="IM" style="font-size: 70px;"> I’m a <span>Developer</span></h1>
+        <p class="hello">HI, MY NAME IS CHIRAPHAT SINGPHETR</p>
+        <h1 class="IM" style="font-size: 70px;">
+            I’m a <span>Developer</span>
+        </h1>
         <p class="Web">เว็บไซต์ Portfolio สำหรับเก็บสะสมผลงานของนักศึกษา</p>
+
+        <!-- ปุ่มเลื่อนไปยัง About Me -->
         <a href="#about" class="btn">ABOUT ME</a>
     </div>
 
-    <!-- รูปคน (ไม่มีวงกลมแล้ว) -->
+    <!-- รูปโปรไฟล์ -->
     <div class="hero-image">
-        <img src="image/PortProfile.png" alt="profile">
+        <img src="image/tttt.png" alt="profile">
+    </div>
+</section> 
+
+
+<!-- About Me : เกี่ยวกับฉัน -->
+
+<section id="about" class="section about-section">
+
+    <div class="about-container">
+
+        <!-- รูปโปรไฟล์ด้านซ้าย -->
+        <div class="profile-img">
+            <img src="image/Prof.png" alt="Profile">
+        </div>
+
+        <!-- ข้อมูลส่วนตัวด้านขวา -->
+        <div class="about-text">
+            <h2>About Me</h2>
+
+            <!-- คำอธิบายความสนใจ -->
+            <p>
+                มีความสนใจด้านการพัฒนาเว็บไซต์ (Web Development)
+                และการออกแบบระบบ เพื่อสร้างเว็บไซต์ที่ใช้งานง่ายและมีประสิทธิภาพ
+            </p>
+
+            <!-- รายละเอียดส่วนตัว liคือlistitem-->
+            <ul>
+                <li><strong>ชื่อ:</strong> นายจีรพัฒน์ สิงห์เพชร</li>
+                <li><strong>อายุ:</strong> 20 ปี</li>
+                <li><strong>Email:</strong> Chiraphat.si@ksu.ac.th</li> 
+                <li><strong>การศึกษา:</strong> Business computer</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
-<!-- ===== About ===== -->
-<section id="about" class="section">
-    <h2>เกี่ยวกับเรา</h2>
-    <p>นักศึกษาที่สนใจด้านการพัฒนาเว็บไซต์ และเทคโนโลยีสารสนเทศ</p>
+
+<!-- Skills : ทักษะ -->
+
+<section id="skills" class="section skills-section">
+
+    <!-- หัวข้อทักษะ -->
+    <h2 class="section-title">My Skills</h2>
+
+    <!-- กล่องแสดงทักษะแบบ Grid -->
+    <div class="skills-grid">
+
+        <!-- ทักษะ HTML -->
+        <div class="skill-card">
+            <img src="image/LOGO/HTML5_logo_and_wordmark.svg.png">
+            <p>HTML HyperText Markup Language</p>
+        </div>
+
+        <!-- ทักษะ CSS -->
+        <div class="skill-card">
+            <img src="image/LOGO/CSS3_logo_and_wordmark.svg.png">
+            <p>CSS Cascading Style Sheets</p>
+        </div>
+
+        <!-- ทักษะ Python -->
+        <div class="skill-card">
+            <img src="image/LOGO/Python-logo-notext.svg.png">
+            <p>Python</p>
+        </div>
+
+        <!-- ทักษะ PHP -->
+        <div class="skill-card">
+            <img src="image/LOGO/PHP-logo.svg.png">
+            <p>PHP Hypertext Preprocessor</p>
+        </div>
+
+        <!-- ทักษะ SQL -->
+        <div class="skill-card">
+            <img src="image/LOGO/SQL SEVER LOGO.png">
+            <p>Structured Query Language</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- ===== Skills ===== -->
-<section id="skills" class="section gray">
-    <h2>ทักษะ</h2>
-    <ul>
-        <li>HTML / CSS</li>
-        <li>Python เบื้องต้น</li>
-        <li>ออกแบบเว็บไซต์</li>
-    </ul>
+
+<!-- Education : การศึกษา -->
+
+<section id="Education" class="education">
+
+    <!-- ข้อมูลการศึกษา -->
+    <div class="edu-text">
+
+        <!-- โลโก้สถาบัน -->
+        <img src="image/LOGO/Kalasin_University_LOGO.svg" alt="logo" class="edu-logo">
+
+        <h2>Education</h2>
+
+        <!-- คำอธิบาย -->
+        <p>
+            กำลังศึกษาระดับปริญญาตรี สาขาคอมพิวเตอร์ธุรกิจ
+            มีความสนใจด้านการพัฒนาเว็บไซต์และแอปพลิเคชัน
+        </p>
+
+        <!-- รายละเอียดการศึกษา -->
+        <p><strong>ระดับ:</strong> ปริญญาตรี</p>
+        <p><strong>สาขา:</strong> คอมพิวเตอร์ธุรกิจ</p>
+        <p><strong>สถาบัน:</strong> มหาวิทยาลัยภาคฟื้น</p>
+        <p><strong>ปีการศึกษา:</strong> 2567</p>
+    </div>
+
+    <!-- รูปสถาบัน -->
+    <div class="edu-image">
+        <img src="image/KalasinUnivercity.jpg" alt="university">
+    </div>
 </section>
 
-<!-- ===== Education ===== -->
-<section id="education" class="section">
-    <h2>การศึกษา</h2>
-    <p>กำลังศึกษาในระดับปริญญาตรี</p>
+
+<!-- Experience : ประสบการณ์ -->
+
+<section id="experience" class="experience">
+
+    <h2>Experience</h2>
+
+    <!-- ประสบการณ์ที่ 1 -->
+    <div class="exp-item">
+        <img src="image/LOGO/csshtmlpython.png" alt="experience">
+        <div>
+            <h3>Website Development Project</h3>
+            <p>
+                พัฒนาเว็บไซต์ Portfolio และเว็บไซต์ระบบจัดการข้อมูล
+                เพื่อฝึกทักษะด้าน Front-end
+            </p>
+            <p><strong>Skills:</strong> HTML, CSS, Grid Layout</p>
+        </div>
+    </div>
+
+    <!-- ประสบการณ์ที่ 2 -->
+    <div class="exp-item">
+        <img src="image/SQL.png" alt="experience">
+        <div>
+            <h3>SQL Server Management</h3>
+            <p>
+                พัฒนาเว็บไซต์ที่ใช้ SQL ในการจัดการฐานข้อมูล
+                เพื่อฝึกทักษะด้านการออกแบบและจัดการข้อมูล
+            </p>
+            <p><strong>Skills:</strong> SQL, การจัดการฐานข้อมูล, ออกแบบตารางข้อมูล</p>
+        </div>
+    </div>
+
 </section>
 
-<!-- ===== Experience ===== -->
-<section id="experience" class="section gray">
-    <h2>ประสบการณ์</h2>
-    <p>ฝึกทำเว็บไซต์และโปรเจกต์ในรายวิชา</p>
-</section>
 
-<!-- ===== Portfolio ===== -->
+<!-- Portfolio : ผลงาน -->
+
 <section id="projects" class="section gray">
+
     <h2>ผลงาน (Portfolio)</h2>
 
+    <!-- Grid แสดงผลงาน -->
     <div class="portfolio-grid">
 
-        <!-- ชิ้นงานที่ 1 -->
+        <!-- ผลงานที่ 1 -->
         <div class="portfolio-item">
-            <img src="image/borntodev-academy_Essential SQL for Everyone_certificate.png" alt="ผลงานที่ 1"
-            style="width:80%; height:400px; object-fit:cover;">
-            <h3>ผลงานที่ 1</h3>
-            <p>เว็บไซต์ Portfolio นักศึกษา</p>
+            <img src="image/certificate/borntodev-academy_Essential SQL for Everyone_certificate.png"
+                 alt="Essential SQL for everyone"
+                 style="width:80%; height:400px; object-fit:cover;">
+            <h3>Essential SQL for everyone</h3>
+            <p>อัพสกิลเขียนโปรแกรม</p>
         </div>
 
-        <!-- ชิ้นงานที่ 2 -->
+        <!-- ผลงานที่ 2 -->
         <div class="portfolio-item">
-            <img src="image/ระดับ3.png" alt="ผลงานที่ 2"
-            style="width:50%; height:500px; object-fit:cover;">
-            <h3>ผลงานที่ 2</h3>
-            <p>งานออกแบบหน้าเว็บ</p>
+            <img src="image/certificate/ระดับ3.png"
+                 style="width:50%; height:500px; object-fit:cover;">
+            <h3>อบรมระบบสมรรถนะบุคคล ระดับ 3</h3>
+            <p>สาขาวิชาชีพผู้ปฏิบัติงานวิศกรรมข้อมูล</p>
         </div>
 
-        <!-- ชิ้นงานที่ 3 -->
+        <!-- ผลงานที่ 3 -->
         <div class="portfolio-item">
-            <img src="image/ระดับ4.png" alt="ผลงานที่ 3"
-            style="width:50%; height:500px; object-fit:cover;">
-            <h3>ผลงานที่ 3</h3>
-            <p>โปรเจกต์รายวิชา</p>
+            <img src="image/certificate/ระดับ4.png"
+                 style="width:50%; height:500px; object-fit:cover;">
+            <h3>อบรมระบบสมรรถนะบุคคล ระดับ 4</h3>
+            <p>สาขาวิชาชีพผู้ปฏิบัติงานวิศกรรมข้อมูล</p>
         </div>
 
-        <!-- ชิ้นงานที่ 4 -->
+        <!-- ผลงานที่ 4 -->
         <div class="portfolio-item">
-            <img src="image/ระดับ5.png" alt="ผลงานที่ 4"
-            style="width:50%; height:500px; object-fit:cover;">
-            <h3>ผลงานที่ 4</h3>
-            <p>เว็บไซต์ HTML/CSS</p>
+            <img src="image/certificate/ระดับ5.png"
+                 style="width:50%; height:500px; object-fit:cover;">
+            <h3>อบรมระบบสมรรถนะบุคคล ระดับ 5</h3>
+            <p>สาขาวิชาชีพผู้ปฏิบัติงานวิศกรรมข้อมูล</p>
         </div>
 
     </div>
-</section>
-
 </section>
 
 </body>

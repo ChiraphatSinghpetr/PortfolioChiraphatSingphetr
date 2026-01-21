@@ -1,48 +1,57 @@
-/* รีเซ็ต */
+
+/* Reset CSS */
+/* รีเซ็ตค่าเริ่มต้นของ browser */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth; /* เลื่อนลื่น */
+    margin: 0;                 /* ลบระยะขอบเริ่มต้น */
+    padding: 0;                /* ลบระยะห่างภายใน */
+    box-sizing: border-box;    /* คำนวณขนาดรวม padding + border */
+    font-family: Arial, sans-serif; /* ฟอนต์หลักของเว็บไซต์ */
+    scroll-behavior: smooth;   /* เลื่อนหน้าเว็บแบบลื่น */
 }
+
 body{
-    margin-top: 0px;
+    margin-top: 0px;           /* ไม่เว้นระยะด้านบน */
 }
+
+
 /* Navbar */
+/* แถบเมนูนำทางด้านบน */
+
 .navbar {
-    background: #2c3e50;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
+    background: #2c3e50;       /* สีพื้นหลังเมนู */
+    color: white;              /* สีตัวอักษร */
+    padding: 15px 40px;        /* ระยะห่างรอบเมนู */
+    display: flex;             /* ใช้ Flexbox */
+    justify-content: space-between; /* แยกซ้าย-ขวา */
+    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
+    position: sticky;          /* เมนูติดด้านบนเวลาเลื่อน */
     top: 0;
 }
 
 .navbar a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
+    color: white;              /* สีลิงก์ */
+    margin-left: 15px;         /* ระยะห่างระหว่างเมนู */
+    text-decoration: none;     /* ไม่ขีดเส้นใต้ */
 }
 
-/* Hero */
+
+/* Hero Section */
+/* หน้าแรกของเว็บไซต์ */
+
 .hero {
-    background: linear-gradient(#f89c3c, #ffc766);
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    height: 50px;
+    background: linear-gradient(#f89c3c, #ffc766); /* พื้นหลังไล่สี */
+    min-height: 100vh;         /* สูงเต็มหน้าจอ */
+    display: grid;             /* ใช้ Grid Layout */
+    grid-template-columns: 1fr 1fr; /* แบ่งซ้าย-ขวา */
+    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
     padding: 0px;
     margin-top: 0px;
-    
 }
 
 .hero-text {
-    color: white;
-    padding-left: 80px;
+    color: white;              /* สีข้อความ */
+    padding-left: 80px;        /* เว้นระยะจากซ้าย */
 }
 
 .hero-text h1 {
@@ -51,9 +60,10 @@ body{
 }
 
 .hero-text span {
-    color: #222;
+    color: #222;               /* สีเน้นคำ Developer */
 }
 
+/* ปุ่ม */
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -64,38 +74,44 @@ body{
     border-radius: 4px;
 }
 
-/* รูปคน */
+/* รูปโปรไฟล์หน้าแรก */
 .hero-image img {
-    width: 500px;
+    width: 500px;              /* ขนาดรูป */
     margin-top: 0;
 }
 
-/* Section */
+
+/* Section ทั่วไป */
+
 .section {
-    padding: 80px;
-    text-align: center;
+    padding: 80px;             /* ระยะห่างรอบ section */
+    text-align: center;        /* จัดข้อความกึ่งกลาง */
 }
 
 .section h2 {
     margin-bottom: 20px;
 }
 
+/* Section สีเทา */
 .gray {
     background: #f4f4f4;
 }
+
+/* ขนาดข้อความหน้าแรก */
 .hello{
     font-size: 20px;
 }
-.IM{
-    font-size: 500=px;
-}
+
 .Web{
     font-size: 20px;
 }
-/* ===== Portfolio ===== */
+
+
+/* Portfolio */
+
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* ซ้าย-ขวา */
+    display: grid;             /* ใช้ Grid */
+    grid-template-columns: 1fr 1fr; /* แสดง 2 คอลัมน์ */
     gap: 30px;
     margin-top: 40px;
 }
@@ -110,7 +126,7 @@ body{
 .portfolio-item img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover;         /* ปรับรูปให้พอดี */
     border-radius: 6px;
 }
 
@@ -121,4 +137,148 @@ body{
 .portfolio-item p {
     font-size: 14px;
     color: #555;
+}
+
+
+/* Skills */
+
+.skills-section {
+    background: #f7f2e7;       /* สีพื้นหลัง */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.skill-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.skill-card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* About Me */
+
+.about-section {
+    background: #fff;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-text ul {
+    list-style: none;
+}
+
+.about-text li {
+    margin-bottom: 8px;
+}
+
+/* รูปโปรไฟล์แบบวงกลม */
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ff9f43;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Education */
+
+.education {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.edu-logo {
+    width: 60px;               /* ขนาดโลโก้ */
+    margin-bottom: 50px;
+}
+
+.edu-text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.edu-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Experience */
+
+.experience {
+    background-color: #f7f7f7; /* พื้นหลังสีอ่อน */
+    padding: 80px 100px;
+}
+
+.experience h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.exp-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.exp-item img {
+    width: 100%;
+    border-radius: 10px;
 }
